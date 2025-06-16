@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ElectroHogar - Tecnología para tu vida</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilo para la imagen principal (Hero) */
+    .hero {
+      background: url('/imagenes/principal.png') no-repeat center center;
+      background-size: cover;
+      height: 60vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 5px #000;
+    }
+    /* Estilo para que las imágenes de los productos tengan la misma altura */
+    .card img {
+      height: 250px;
+      object-fit: cover;
+    }
+    /* Estilo para el pie de página */
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">ElectroHogar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ofertas">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero text-center">
+    <div>
+      <h1 class="display-4">Bienvenido a ElectroHogar</h1>
+      <p class="lead">La mejor tecnología para renovar tu hogar</p>
+    </div>
+  </div>
+
+  <section id="ofertas" class="container my-5">
+    <h2 class="text-center mb-4">Nuestras Ofertas Destacadas</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <h4>Lavadora Carga Frontal</h4>
+        <p><strong>20% de descuento</strong> - Antes: $2.500.000</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Smart TV 55" 4K</h4>
+        <p><strong>Envío gratis</strong> - Precio: $1.800.000</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Nevera No-Frost</h4>
+        <p><strong>Bono de $100.000</strong> - Precio: $3.200.000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalogo" class="container my-5">
+    <h2 class="text-center mb-4">Catálogo de Productos</h2>
+
+    <div class="accordion" id="catalogoAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingLineaBlanca">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLineaBlanca">
+            Línea Blanca
+          </button>
+        </h2>
+        <div id="collapseLineaBlanca" class="accordion-collapse collapse show" data-bs-parent="#catalogoAccordion">
+          <div class="accordion-body row g-4">
+            <div class="col-md-4">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c" class="card-img-top" alt="Lavadora">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Lavadora Carga Frontal 20kg</h5>
+                  <p>$2.199.900</p>
+                  <button class="btn btn-primary" onclick="agregarProducto('Lavadora 20kg')">Agregar al carrito</button>
+                </div>
+              </div>
+            </div>
+             <div class="col-md-4">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1616464916566-3a536752c799" class="card-img-top" alt="Nevera">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Nevera No-Frost 380L</h5>
+                  <p>$3.150.000</p>
+                  <button class="btn btn-primary" onclick="agregarProducto('Nevera 380L')">Agregar al carrito</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                  <img src="imagenes/horno-electrico.jpg" class="card-img-top" alt="Horno Eléctrico">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Horno Eléctrico Multifunción</h5>
+                    <p>$850.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto('Horno Eléctrico')">Agregar al carrito</button>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                  <img src="imagenes/estufa-induccion.jpg" class="card-img-top" alt="Estufa de Inducción">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Estufa de Inducción Portátil</h5>
+                    <p>$320.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto('Estufa de Inducción')">Agregar al carrito</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTV">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTV">
+            Televisores y Video
+          </button>
+        </h2>
+        <div id="collapseTV" class="accordion-collapse collapse" data-bs-parent="#catalogoAccordion">
+          <div class="accordion-body row g-4">
+             <div class="col-md-4">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1593784944526-65936c062835" class="card-img-top" alt="Televisor">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Smart TV 55" 4K UHD</h5>
+                  <p>$1.799.900</p>
+                  <button class="btn btn-primary" onclick="agregarProducto('Smart TV 55 pulgadas')">Agregar al carrito</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                  <img src="/imagenes/barra-sonido.jpg.png" class="card-img-top" alt="Barra de Sonido">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Barra de Sonido 2.1 Canales</h5>
+                    <p>$480.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto('Barra de Sonido')">Agregar al carrito</button>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                  <img src="/imagenes/proyector-portatil.jpg.png" class="card-img-top" alt="Proyector Portátil">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Proyector Portátil Full HD</h5>
+                    <p>$920.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto('Proyector Portátil')">Agregar al carrito</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingPequenos">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePequenos">
+            Pequeños Electrodomésticos
+          </button>
+        </h2>
+        <div id="collapsePequenos" class="accordion-collapse collapse" data-bs-parent="#catalogoAccordion">
+          <div class="accordion-body row g-4">
+            <div class="col-md-4">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1589254066205-d1469e0b522d" class="card-img-top" alt="Licuadora">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Licuadora de Alta Potencia</h5>
+                  <p>$350.000</p>
+                  <button class="btn btn-primary" onclick="agregarProducto('Licuadora de Alta Potencia')">Agregar al carrito</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                  <img src="/imagenes/aspiradora-robot.jpg.png" class="card-img-top" alt="Aspiradora Robot">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Aspiradora Robot Inteligente</h5>
+                    <p>$680.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto('Aspiradora Robot')">Agregar al carrito</button>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                  <img src="/imagenes/cafetera-expresso.jpg.png" class="card-img-top" alt="Cafetera Expresso">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Cafetera Expresso Automática</h5>
+                    <p>$550.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto('Cafetera Expresso')">Agregar al carrito</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="nosotros" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Sobre Nosotros</h2>
+      <p class="text-center">Somos líderes en la venta de electrodomésticos, comprometidos con ofrecer la mejor tecnología y calidad a nuestros clientes. Con más de 20 años de experiencia, te garantizamos el mejor servicio y los mejores precios del mercado.</p>
+    </div>
+  </section>
+
+  <section id="contacto" class="container my-5">
+    <h2 class="text-center mb-4">Contáctanos</h2>
+    <p class="text-center">📍 Av. Principal #45-67, Ocaña, Norte de Santander | ☎ (310) 123-4567 | 📧 ventas@electrohogar.com</p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ElectroHogar. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Esta función se activa cuando un usuario hace clic en el botón "Agregar al carrito".
+    // Recibe el 'nombre' del producto como parámetro.
+    function agregarProducto(nombre) {
+      // Muestra una alerta usando comillas invertidas (template literals)
+      // para poder insertar la variable 'nombre' directamente en el texto.
+      alert(`Has agregado "${nombre}" a tu carrito.`);
+    }
+  </script>
+</body>
+</html>
