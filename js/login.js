@@ -1,4 +1,3 @@
-// Lista de usuarios simulados
 const usuarios = [
   { email: "juan@correo.com", password: "jua123" },
   { email: "maria@correo.com", password: "mar123" },
@@ -14,7 +13,6 @@ const usuarios = [
 
 document.getElementById("loginForm").addEventListener("submit", function(e) {
   e.preventDefault();
-
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
 
@@ -39,9 +37,10 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
       timer: 2000,
       showConfirmButton: false
     }).then(() => {
-      window.location.href = "html/pagina_principal.html";
+      window.location.href = "/html/principal.html";
     });
   } else {
     Swal.fire("Error", "Correo o contraseña incorrectos.", "error");
   }
 });
+
